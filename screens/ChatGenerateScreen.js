@@ -93,7 +93,6 @@ export default function ChatCapabilitiesScreen({ navigation }) {
               style={styles.logo}
             />
           </View>
-
           <Text style={styles.capabilitiesTitle}>Legalmind</Text>
           <SafeAreaProvider>
             <SafeAreaView style={styles.container}>
@@ -182,7 +181,6 @@ const styles = StyleSheet.create({
   capabilitiesTitle: {
     fontSize: 22,
     fontWeight: 'bold',
-    marginBottom: 20,
     textAlign: 'center',
     paddingTop: 20,
     color: '#C7C7CE'
@@ -191,7 +189,7 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     borderRadius: 100,
-    marginTop: 100,
+    marginTop: 10,
   },
   logoCenter: {
     justifyContent: 'flex-start',
