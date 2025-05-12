@@ -15,6 +15,8 @@ import axios from 'axios';
 
 const urlImage = 'https://res.cloudinary.com/dz9j1pqvk/image/upload/v1737823658/ITZONE2023/devices/Thi%E1%BA%BFt_k%E1%BA%BF_ch%C6%B0a_c%C3%B3_t%C3%AAn_4_jy6kt6.png';
 
+const userImage = 'https://res.cloudinary.com/dz9j1pqvk/image/upload/v1737823658/ITZONE2023/devices/Thi%E1%BA%BFt_k%E1%BA%BF_ch%C6%B0a_c%C3%B3_t%C3%AAn_4_jy6kt6.png';
+
 export default function ChatScreen({ navigation }) {
   const [messages, setMessages] = useState([
     { text: 'Hello! How may I assist you today?', sender: 'bot' },
@@ -37,7 +39,7 @@ export default function ChatScreen({ navigation }) {
       setLoading(true);
 
       try {
-        const response = await axios.post('http://192.168.2.20:5000/query', {
+        const response = await axios.post('http://192.168.1.6:5000/api/query', {
           question: inputText,
         });
 
@@ -171,7 +173,6 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 2,
   },
   userBubble: {
-    backgroundColor: '#007AFF',
     marginRight: 10, // Space between user message bubble and avatar
     borderBottomRightRadius: 2,
   },

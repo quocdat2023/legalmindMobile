@@ -15,8 +15,8 @@ export default function CustomDrawerContent(props) {
         return 'settings';
       case 'Đăng nhập':
         return 'login';
-      case 'Chat':
-        return 'chat';
+      // case 'Chat':
+      //   return 'chat';
       default:
         return 'info';
     }

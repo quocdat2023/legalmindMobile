@@ -6,9 +6,7 @@ const urlImage = 'https://res.cloudinary.com/dz9j1pqvk/image/upload/v1737823658/
 
 export default function HomeScreen({ navigation }) {
   const handleStartChat = () => {
-    // Navigate to the ChatCapabilitiesScreen (ChatScreen)
-    navigation.navigate('Chat');
-    // navigation.navigate('Legalmind'); // Ensure 'ChatCapabilities' matches the name of the screen in the navigator
+    navigation.navigate('Truy vấn');
   };
 
   return (
@@ -22,14 +20,7 @@ export default function HomeScreen({ navigation }) {
                   />
         </TouchableOpacity>
       </View>
-      {/* Header */}
-      {/* <View style={styles.header}>
-        <Image
-          source={{ uri: urlImage }} // Replace with your logo URL
-          style={styles.logoHeader}
-        />
-        <Text style={styles.headerTitle}>Legalmind AI</Text>
-      </View> */}
+ 
 
       {/* Main content */}
       <View style={styles.main}>
@@ -37,7 +28,7 @@ export default function HomeScreen({ navigation }) {
           source={{ uri: urlImage }} // Replace with your logo URL
           style={styles.logo}
         />
-        <Text style={styles.welcomeText}>Welcome to Legalmind AI 👋</Text>
+        <Text style={styles.welcomeText}>Welcome to Legalmind AI</Text>
         <Text style={styles.description}>Start chatting with ChattyAI now. You can ask me anything.</Text>
 
         <TouchableOpacity style={styles.button} onPress={handleStartChat}>
@@ -111,9 +102,9 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   description: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#777777',
-    marginTop: 10,
+    marginTop: 16,
     textAlign: 'center',
   },
   button: {
