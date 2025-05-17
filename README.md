@@ -20,7 +20,6 @@
 | **Refresh Token - valid**             | POST `/auth/refresh?refreshToken=validtoken`                       | 200 OK + new access token                 |
 | **Refresh Token - missing token**    | Query param missing                                                | 400 Bad Request + error message          |
 | **Refresh Token - invalid token**    | Token expired or invalid                                           | 401 Unauthorized                         |
-
 | **Forgot Password - valid**           | POST `/auth/forgot-password?email=user@example.com`                | 200 OK, reset mail sent                   |
 | **Forgot Password - unknown email**  | Email not registered                                               | 404 Not Found or 200 OK with message      |
 | **Reset Password - valid**            | POST `/auth/reset-password` Body: valid token & newPassword        | 200 OK, password changed                   |
